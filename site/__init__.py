@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-from flask_login.utils import login_required
 import sqlite3 as sql
 import os
 
