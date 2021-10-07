@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<style type="text/css">
+    
+    body {
+        background-color: darkgoldenrod;
+    }
+
+   .logout {
+        
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        text-align: right;
+    }
+    a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        }
+        fieldset {
+            border: none;
+            border-radius: 10px;
+            
+        }
+
+        img {
+            border: 0.5px solid;
+            border-radius: 10px;
+            transform: translate(17%,7%);
+            margin: center;
+
+        } 
+</style>
+    <body>
+       <div class="logout">
+        <a href="/" >Logout</a>
+       </div>
+      <h1><b>Olá {{nome_usuario}}, bem vindo(a)!!!</b></h1>   
+      
+    <form  method="POST" enctype="multipart/form-data" >
+      <fieldset>
+        <img src="static/Boy.jpg" width="75%" class="img">
+       {% with messages = get_flashed_messages() %}
+       {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+       {% endif %}
+       {% endwith %}
+       {% block body %}{% endblock %}
+    </fieldset>
+    </form>
+    </div>
+    </body>
+</html>

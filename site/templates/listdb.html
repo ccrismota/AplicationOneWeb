@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados</title>
+    
+</head>
+<style type="text/css">
+ 
+.form {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: silver(219, 224, 224);
+        font-size: 13px;
+        
+    }
+         
+</style>
+    <body>
+        <h3><a href ='/cadastro'>Home</a></h3>
+        <table border="2" width="100%">
+            <tbody>
+                <tr>
+                    <th>Nome completo</th>
+                    <th>E-mail</th>
+                    <th>Pais</th>
+                    <th>Estado</th>
+                    <th>Municipio</th>
+                    <th>CEP</th>
+                    <th>Rua</th>
+                    <th>Numero</th>
+                    <th>Complemento</th>
+                    <th>CPF</th>
+                    <th>PIS</th>
+                    <th>Senha</th>    
+                </tr>
+                {% for row in dados_usuario %}
+                <tr>
+                    <td>{{row["nome_completo"]}}</td>
+                    <td>{{row["email"]}}</td>
+                    <td>{{row["pais"]}}</td>
+                    <td>{{row["estado"]}}</td>
+                    <td>{{row["municipio"]}}</td>
+                    <td>{{row["cep"]}}</td>
+                    <td>{{row["rua"]}}</td>
+                    <td>{{row["numero"]}}</td>
+                    <td>{{row["complemento"]}}</td>
+                    <td>{{row["cpf"]}}</td>
+                    <td>{{row["pis"]}}</td>
+                    <td>{{row["senha"]}}</td>
+                </tr>
+            </tbody>
+            {% endfor %}   
+        </table>
+    </body>
+</html>
+
+
+
+
+
+
